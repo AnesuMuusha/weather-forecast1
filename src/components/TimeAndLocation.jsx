@@ -1,10 +1,19 @@
-import React from 'react'
+import React from "react";
 
-
-function TimeAndLocation() {
+function TimeAndLocation(){
   return (
-    <div className='text-white'>Time And Location</div>
-  )
+    <div>
+      <div className="flex items-center justify-center my-6">
+        <p className="text-white text-xl font-extralight">
+          Date and time
+        </p>
+      </div>
+
+      <div className="flex items-center justify-center my-3">
+        <p className="text-white text-3xl font-medium">UK</p>
+      </div>
+    </div>
+  );
 }
 
-export default TimeAndLocation
+export default TimeAndLocation;
