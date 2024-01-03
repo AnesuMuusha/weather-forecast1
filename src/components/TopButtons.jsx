@@ -19,7 +19,7 @@ function TopButtons({ setQuery }) {
     },
     {
       id: 5,
-      title: "Paris",
+      title: "Cape Town",
     },
   ];
 
