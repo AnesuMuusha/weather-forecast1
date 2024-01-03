@@ -3,25 +3,20 @@ import React from "react";
 function TemperatureAndDetails(){
   return (
     <div>
-      <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
-        <p>xxx</p>
+      <div className="flex items-center justify-center py-6 text-xl">
       </div>
-
-      <div className="flex flex-row items-center justify-between text-white py-3">
-        
-        <p>nnn</p>
+      <div className="flex flex-row items-center justify-between text-white py-3">    
+        <p>Image</p>
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             Real fell:
             <span className="font-medium ml-1">feels_like°</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
-
             Humidity:
             <span className="font-medium ml-1">12%</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
-   
             Wind:
             <span className="font-medium ml-1">3443 km/h</span>
           </div>
@@ -48,8 +43,6 @@ function TemperatureAndDetails(){
           <span className="font-medium ml-1">45°</span>
         </p>
         <p className="font-light">|</p>
-
-      
         <p className="font-light">
           Low:{" "}
           <span className="font-medium ml-1">22°</span>
