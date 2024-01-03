@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import { toast } from "react-toastify";
 
-function Inputs({ setQuery, units, setUnits }) {
+function Inputs({ units }) {
   const [city, setCity] = useState("");
 
   const handleUnitsChange = (e) => {
     const selectedUnit = e.currentTarget.name;
-    if (units !== selectedUnit) setUnits(selectedUnit);
+    if (units !== selectedUnit) ;
   };
 
   const handleSearchClick = () => {
-    if (city !== "") setQuery({ q: city });
+    if (city !== "") ;
   };
 
   const handleLocationClick = () => {
@@ -19,13 +19,8 @@ function Inputs({ setQuery, units, setUnits }) {
       toast.info("Fetching users location.");
       navigator.geolocation.getCurrentPosition((position) => {
         toast.success("Location fetched!");
-        let lat = position.coords.latitude;
-        let lon = position.coords.longitude;
-
-        setQuery({
-          lat,
-          lon,
-        });
+ 
+;
       });
     }
   };
@@ -38,7 +33,7 @@ function Inputs({ setQuery, units, setUnits }) {
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           placeholder="Search for city...."
-          className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
+          className="text-xl text-blue-400 font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
         />
         <UilSearch
           size={25}

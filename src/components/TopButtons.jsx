@@ -1,4 +1,5 @@
 import React from "react";
+
 function TopButtons({ setQuery }) {
   const cities = [
     {
@@ -23,15 +24,19 @@ function TopButtons({ setQuery }) {
     },
   ];
 
+  const handleButtonClick = (city) => {
+    alert(`You selected ${city.title}`);
+  };
+
   return (
     <div className="flex items-center justify-around my-6 ">
       {cities.map((city) => (
         <button
           key={city.id}
           className="text-lg font-medium text-white"
-          onClick={() => setQuery({ q: city.title })}
+          onClick={() => handleButtonClick(city)}
         >
-        {city.title}
+          {city.title}
         </button>
       ))}
     </div>
