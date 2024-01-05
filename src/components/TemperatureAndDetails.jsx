@@ -2,8 +2,8 @@ import React from "react";
 
 function TemperatureAndDetails(){
   return (
-    <div>
-      <div className="flex items-center justify-center py-6 text-xl">
+    <div className="md:text-red-600 lg:text-red-600 xl:text-red-600">
+      <div className="flex items-center justify-center py-6">
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">    
         <p>Image</p>
