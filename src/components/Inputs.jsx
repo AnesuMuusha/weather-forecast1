@@ -26,7 +26,7 @@ function Inputs({ units }) {
   };
 
   return (
-    <div className="flex flex-row justify-center my-6">
+    <div className="md:text-lg lg:text-xl xl:text-xl flex flex-row justify-center my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input
           value={city}

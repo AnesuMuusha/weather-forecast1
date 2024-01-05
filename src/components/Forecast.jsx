@@ -3,8 +3,8 @@ import React from "react";
 function Forecast({ title, items }) {
   console.log(items);
   return (
-    <div>
-      <div className="">
+    <div className="md:text-lg lg:text-xl xl:text-xl">
+      <div>
         <p className="">Hourly Forecast</p>
       </div>
       <hr className="my-2" />
@@ -12,7 +12,7 @@ function Forecast({ title, items }) {
       <div className="flex flex-row items-center justify-between">
   Forecast
 
-        
+   
       </div>
     </div>
   );

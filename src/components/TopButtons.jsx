@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Weather from "./Weather";
 
-function TopButtons({ setQuery }) {
+function TopButtons() {
+  const [selectedCity, setSelectedCity] = useState(null);
+
   const cities = [
     {
       id: 1,
@@ -25,20 +28,24 @@ function TopButtons({ setQuery }) {
   ];
 
   const handleButtonClick = (city) => {
-    alert(`You selected ${city.title}`);
+    setSelectedCity(city);
   };
 
   return (
-    <div className="flex items-center justify-around my-6 ">
+    <div className=''>
+    
+    <div className="md:text-lg lg:text-xl xl:text-xl flex  items-center justify-around my-6 ">
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-sm font-medium text-white"
+          className="md:text-lg lg:text-xl xl:text-xl text-sm font-medium text-white"
           onClick={() => handleButtonClick(city)}
         >
           {city.title}
         </button>
       ))}
+      {selectedCity && <Weather city={selectedCity} />}
+    </div>
     </div>
   );
 }
