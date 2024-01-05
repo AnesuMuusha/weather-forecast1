@@ -23,7 +23,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="text-xl text-white">
+    <div className="text-white">
       <h2>Weather Information</h2>
       <p>____________________</p>
       <p>Temperature: {weatherData.main.temp}°C</p>

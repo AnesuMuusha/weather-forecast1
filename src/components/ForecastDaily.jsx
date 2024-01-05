@@ -3,9 +3,9 @@ import React from "react";
 function ForecastDaily({ title, items }) {
   console.log(items);
   return (
-    <div>
-      <div className="flex items-center justify-start mt-6">
-        <p className="text-white font-medium uppercase">Daily Forecast</p>
+    <div className="md:text-xl lg:text-red-600 xl:text-red-600">
+      <div className="flex items-center justify-start mt-2">
+        <p className="text-white font-medium ">Daily Forecast</p>
       </div>
       <hr className="my-2" />
 

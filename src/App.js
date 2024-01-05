@@ -9,13 +9,10 @@ import Location from './components/location';
 import Weather from './components/Weather';
 function App() {
 return (
-<div className={`bg-blue-400 text-white mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400`}>
-
-{/*<!--* api.open weather map.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}*!--> */}
+<div className={`md:text-lg lg:text-xl xl:text-2xl text-sm bg-blue-400 text-white mx-auto max-w-screen-md mt-4 py-3 px-5 bg-gradient-to-br  h-fit shadow-x shadow-gray-400`}>
 
 <TopButtons></TopButtons>
 <Inputs></Inputs>
-
 <TimeAndLocation/>
 <Location/>
 <Weather/>
