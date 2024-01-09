@@ -2,25 +2,29 @@ import React, { useState } from "react";
 import { UilSearch, UilLocationPoint } from "@iconscout/react-unicons";
 import { toast } from "react-toastify";
 
-function Inputs({ units }) {
+function Inputs({ units, setQuery }) {
   const [city, setCity] = useState("");
-
-  const handleUnitsChange = (e) => {
-    const selectedUnit = e.currentTarget.name;
-    if (units !== selectedUnit) ;
-  };
+  const [selectedUnit, setSelectedUnit] = useState(units);
 
   const handleSearchClick = () => {
-    if (city !== "") ;
+    if (city.trim() !== "") {
+      setQuery({ city, unit: selectedUnit });
+    }
+  };
+  
+  
+  const handleUnitsChange = (e) => {
+    const newUnit = e.currentTarget.name;
+    if (selectedUnit !== newUnit) {
+      setSelectedUnit(newUnit);
+    }
   };
 
   const handleLocationClick = () => {
     if (navigator.geolocation) {
-      toast.info("Fetching users location.");
+      toast.info("Fetching user's location.");
       navigator.geolocation.getCurrentPosition((position) => {
         toast.success("Location fetched!");
- 
-;
       });
     }
   };
@@ -33,7 +37,7 @@ function Inputs({ units }) {
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           placeholder="Search for city...."
-          className=" text-blue-400 font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
+          className="text-blue-400 font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
         />
         <UilSearch
           size={25}
@@ -50,15 +54,19 @@ function Inputs({ units }) {
       <div className="flex flex-row w-1/4 items-center justify-center">
         <button
           name="metric"
-          className=" text-white font-light transition ease-out hover:scale-125"
+          className={`text-white font-light transition ease-out hover:scale-125 ${
+            selectedUnit === "metric" ? "font-bold" : ""
+          }`}
           onClick={handleUnitsChange}
         >
           °C
         </button>
-        <p className=" text-white mx-1">|</p>
+        <p className="text-white mx-1">|</p>
         <button
           name="imperial"
-          className=" text-white font-light transition ease-out hover:scale-125"
+          className={`text-white font-light transition ease-out hover:scale-125 ${
+            selectedUnit === "imperial" ? "font-bold" : ""
+          }`}
           onClick={handleUnitsChange}
         >
           °F
