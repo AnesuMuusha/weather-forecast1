@@ -50,7 +50,7 @@ function Location() {
   return (
     <div className="flex items-center justify-center py-2 text-white">
       
-      <button onClick={getUserLocation}>User Location</button>
+      <button onClick={getUserLocation}>Get User Location</button>
       {userLocation && (
         <div className="flex items-center justify-center py-4 ">
           <p >: Latitude: {userLocation.latitude}</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import image from './../images/weather-icon-png-11063.png';
 
 function TemperatureAndDetails(){
   return (
@@ -6,8 +7,9 @@ function TemperatureAndDetails(){
       <div className="flex items-center justify-center py-6">
       </div>
       <div className="flex flex-row items-center justify-between text-white py-3">    
-        <p>Image</p>
-        <div className="flex flex-col space-y-2">
+        
+      <img src={image} alt="Weather Icon" className="w-16 h-16" />
+      <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
             Real fell:
             <span className="font-medium ml-1">feels_like°</span>
